@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAM.Mobile.Views.JobsDetail"
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="cancel.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Text="Save" Clicked="Save_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="save.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <StackLayout Padding="10">
+        <Label Text="Text" FontSize="Medium" />
+        <Entry Text="{Binding Item.Title}" FontSize="Small" />
+        <Label Text="Description" FontSize="Medium" />
+        <Editor Text="{Binding Item.JobDescription}" FontSize="Small" Margin="0" />
+        <Label Text="Producer" FontSize="Medium" />
+        <Picker x:Name="picker"
+        Title="Select a location">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Colombo</x:String>
+                    <x:String>Galle</x:String>
+                    <x:String>Trinco</x:String>
+                    <x:String>Jaffna</x:String>
+                    <x:String>Matara</x:String>
+                    <x:String>Kandy</x:String>
+                    <x:String>Anuradapura</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label Text="Producer" FontSize="Medium" />
+        <Picker x:Name="picker3"
+        Title="Select a producer">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Mr.Anurada</x:String>
+                    <x:String>Mr.Pushpakumara</x:String>
+                    <x:String>Mr.Hameed</x:String>
+                    <x:String>Mr.Idunl</x:String>
+                    <x:String>Mr.Asanka</x:String>
+                    <x:String>Mr.Lochana</x:String>
+                    <x:String>Mr.Anwer</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+    </StackLayout>
+
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Text" FontSize="Medium" />
+            <Entry Text="{Binding Item.Title}" FontSize="Small" />
+            <Label Text="Description" FontSize="Medium" />
+            <Editor Text="{Binding Item.JobDescription}" FontSize="Small" Margin="0" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
