@@ -26,14 +26,14 @@ namespace MAM.Mobile.Views
 
             menuItems.Add(new HomeMenuItem { Id = MenuItemType.About, Title = "About" });
 
-            if (Utility.Role == "Consumer")
+            if (Utility.Role == "USER")
             {
-                menuItems.Add(new HomeMenuItem { Id = MenuItemType.JobMaster, Title = "Jobs" });
+                menuItems.Add(new HomeMenuItem { Id = MenuItemType.JobMaster, Title = "Payment" });
 
             }
             else
             {
-                menuItems.Add(new HomeMenuItem { Id = MenuItemType.Browse, Title = "Browse" });
+                menuItems.Add(new HomeMenuItem { Id = MenuItemType.Browse, Title = "Approvals" });
             }
 
 

@@ -24,9 +24,9 @@ namespace MAM.Mobile.ViewModels
 
         public ItemsViewModel()
         {
-            if (Utility.Role == "Producer")
+            if (Utility.Role == "MANAGER")
             {
-                Title = "Browse";
+                Title = "Approvals";
                 Items = new ObservableCollection<Item>();
                 LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
@@ -39,7 +39,7 @@ namespace MAM.Mobile.ViewModels
             }
             else
             {
-                Title = "Jobs";
+                Title = "Payments";
                 JobItems = new ObservableCollection<JobsMenuItem>();
                 LoadJobsCommand = new Command(async () => await ExecuteLoadJobsCommand());
 

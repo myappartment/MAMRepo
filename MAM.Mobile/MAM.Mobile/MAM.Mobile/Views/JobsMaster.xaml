@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAM.Mobile.Views.JobsMaster"
-             Title="Jobs">
+             Title="Payment">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="AddItem_Clicked">
+        <ToolbarItem Text="Pay Now" Clicked="AddItem_Clicked">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="UWP" Value="add.png"/>
@@ -44,11 +44,11 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="10"/>
                     </Grid.RowDefinitions>
-                    <Label
+                    <!--<Label
               Grid.Column="1"
               Grid.Row="2"
               Text="AppName"
-              Style="{DynamicResource SubtitleStyle}"/>
+              Style="{DynamicResource SubtitleStyle}"/>-->
                 </Grid>
             </ListView.Header>
             <ListView.ItemTemplate>

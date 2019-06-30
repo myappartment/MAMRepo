@@ -23,11 +23,11 @@ namespace MAM.Mobile.Views
 
         void Save_Clicked(object sender, EventArgs e)
         {
-            Utility.Role = "Producer";
+            Utility.Role = "USER";
 
             if (loginViewModel.UserName.ToUpper() == "PRAGEETH")
             {
-                Utility.Role = "Consumer";
+                Utility.Role = "MANAGER";
             }
 
             Application.Current.MainPage = new MainPage();
